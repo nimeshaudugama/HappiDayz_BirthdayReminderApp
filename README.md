@@ -1,6 +1,11 @@
 # Group14
+App Name : **HappiDayz**
 
-App Name : HappiDayz
+Names: 
+Abilash Raveendran
+Nimesha Udugama 
+Sharan Balraj
+Anson Joseph
 
 App Description : "HappiDayz" is a user-friendly iOS birthday reminder app, developed in Swift, that enables users to easily search their contact list and add birthdays to a list while receiving timely reminder notifications.
 
