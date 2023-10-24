@@ -1,4 +1,4 @@
 import Foundation
 
-// Staring code for As a user, I want to have a easy option to add, update and delete birthdays.
+// Starting code for As a user, I want to enable reminder notifications.
 
