@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContactDetail: View {
-    @State private var isCalendarPresented = false
     @State private var selectedDate = Date()
     let contact: Contact
     
@@ -21,8 +20,6 @@ struct ContactDetail: View {
                     
                     Text(contact.lastName)
                         .font(.system(size: 30, weight: .bold))
-                    
-                   
                 }
                 VStack(alignment: .leading) {
                     Divider()
@@ -56,30 +53,17 @@ struct ContactDetail: View {
                             .foregroundColor(.gray)
                     }
                     Divider()
-                    HStack {
+                    NavigationLink(destination: CalendarDialog(selectedDate: $selectedDate)) {
                         Text("Birthday:")
                             .frame(alignment: .leading)
                             .padding()
-                        Button(action: {
-                            // Show the calendar dialog when the button is tapped
-                            isCalendarPresented.toggle()
-                        }) {
-                            Text(contact.birthday)
-                                .foregroundColor(.gray)
-                        }
+                        Text(contact.birthday)
+                            .foregroundColor(.gray)
                     }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .sheet(isPresented: $isCalendarPresented) {
-                // Present your calendar dialog here
-                CalendarDialog(selectedDate: $selectedDate)
-            }
-//            .navigationTitle("Contact Details")
-//            .navigationBarItems(leading: Button("Back") {
-//                // Handle the action to go back
-//                isCalendarPresented.toggle() // Close the calendar dialog
-//            })
+            
         }
     }
 }
@@ -88,22 +72,11 @@ struct CalendarDialog: View {
     @Binding var selectedDate: Date
 
     var body: some View {
-        NavigationView {
-            DatePicker("Select a Date", selection: $selectedDate, displayedComponents: .date)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .labelsHidden()
-                .navigationTitle("Contact Details")
-                .navigationBarItems(leading: Button("Back") {
-                    
-                    // Handle the action to go back
-                })
-        }
+        DatePicker("Select a Date", selection: $selectedDate, displayedComponents: .date)
+            .datePickerStyle(GraphicalDatePickerStyle())
+            .labelsHidden()
     }
 }
-
-// Usage:
-// ContactDetail(contact: ContactStore.testStore.contacts[0])
-
 
 #Preview {
     ContactDetail(contact: ContactStore.testStore.contacts[0])

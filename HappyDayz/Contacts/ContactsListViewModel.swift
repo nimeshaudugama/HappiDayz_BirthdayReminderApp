@@ -38,14 +38,18 @@ final class ContactsListViewModel {
         self.originalContacts = store.contacts
     }
     
+ 
+    
+    
     func filterSearchResults() {
-        searchResults = store.contacts.filter({
-            $0.firstName.localizedCaseInsensitiveContains(searchTerm)
-        })
-        
+        searchResults = store.contacts.filter { contact in
+            let searchTermLowercased = searchTerm.lowercased()
+            return contact.firstName.localizedCaseInsensitiveContains(searchTermLowercased) ||
+                   contact.lastName.localizedCaseInsensitiveContains(searchTermLowercased)
+        }
     }
-    
-    
+
+   
     func makeContact(contact: Contact){
         store.contacts.append(contact)
     }
