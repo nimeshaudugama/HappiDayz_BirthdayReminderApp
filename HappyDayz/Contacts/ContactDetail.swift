@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-import SwiftUI
-
-struct ContactDetail: View {
-    let contact: Contact
-    
-    var body: some View {
-        //TODO: Complete detail view
-        
-        
-        VStack(spacing: 5){
-            
-            HStack(spacing: 10){
-                Text(contact.fullName)
-                    .bold()
-                    .font(.system(size: 30))
-                    .foregroundStyle(.black)
-        
-                if contact.isFavorite{
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 20))
-                        .foregroundColor(.yellow)
-                    
-                }else{
-                    Image(systemName: "star")
-                }
-            }
-            VStack{
-                Divider()
-                HStack{
-                    Text("Phone Number: ")
-                    .bold()
-                    .foregroundStyle(.black)
-                    Text(contact.phone)
-                        .foregroundStyle(.gray)
-                    }
-                
-                Divider()
-                
-                HStack{
-                    Text("Email:")
-                    .foregroundStyle(.black)
-                    .bold()
-                    Text(contact.email)
-                        .foregroundStyle(.gray)
-                    }
-                
-                Divider()
-                
-                HStack{
-                    Text("Birthday:")
-                    .foregroundStyle(.black)
-                    .bold()
-                    Text(contact.birthDate)
-                        .foregroundStyle(.gray)
-                    }
-               
-                Divider()
-            }
-            
-            Spacer()
-                
-=======
 //
 //  ContactDetail.swift
 //  HappyDayz
@@ -127,13 +64,10 @@ struct ContactDetail: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
->>>>>>> bd91f48cf0953ced3b54a4fc14f31dce5b7e6e3d
         }
     }
 }
 
-<<<<<<< HEAD
-=======
 struct CalendarDialog: View {
     @Binding var selectedDate: Date
 
@@ -144,7 +78,6 @@ struct CalendarDialog: View {
     }
 }
 
->>>>>>> bd91f48cf0953ced3b54a4fc14f31dce5b7e6e3d
 #Preview {
     ContactDetail(contact: ContactStore.testStore.contacts[0])
 }
