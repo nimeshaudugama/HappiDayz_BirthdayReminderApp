@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ContactRow: View {
     let contact: Contact
+    let contactStore: ContactStore
+    
+        
+        init(contact: Contact, contactStore: ContactStore) {
+               self.contact = contact
+               self.contactStore = contactStore
+           }
+    
     var body: some View {
         
-        NavigationLink(destination: ContactDetail(contact: contact)){
+        NavigationLink(destination: ContactDetail(contact: contact, contactStore: contactStore)) {
             
             HStack{
                
@@ -35,7 +43,10 @@ struct ContactRow: View {
     }
 }
 
-#Preview {
-    ContactRow(contact: ContactStore.testStore.contacts[1])
+struct ContactRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let testStore = ContactStore() // Create an instance of your ContactStore
+        return ContactRow(contact: testStore.contacts[1], contactStore: testStore)
+    }
+    
 }
-

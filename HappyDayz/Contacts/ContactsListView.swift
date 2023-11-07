@@ -10,6 +10,7 @@ import SwiftUI
 /// Contact list view
 struct ContactsListView: View {
     @State var viewModel: ContactsListViewModel
+   
     
     var body: some View {
         NavigationStack {
@@ -17,9 +18,12 @@ struct ContactsListView: View {
             
             List {
                 ForEach(viewModel.listData) { contact in
-                    ContactRow(contact: contact)
+                    ContactRow(contact: contact, contactStore: viewModel.store)
                     
                 }
+                
+                .onMove(perform: moveContact)
+                .onDelete(perform: deleteContact)
               
                 
                 
@@ -39,10 +43,22 @@ struct ContactsListView: View {
                 viewModel.filterSearchResults()
             }
             
+            .toolbar{
+                HStack{
+                    Button("Add"){
+                        makeContact()
+                    }
+                   
+                    EditButton()
                 }
             }
-        
+        }
 
+    }
+                
+            
+        
+ 
     
     
     func makeContact(){
@@ -54,10 +70,24 @@ struct ContactsListView: View {
         }
     }
     
+    func deleteContact(offsets: IndexSet){
+        withAnimation{
+            viewModel.deleteContact(offset: offsets)
+        }
+    }
+    
+    func moveContact(from: IndexSet, to: Int){
+        withAnimation{
+            viewModel.moveContacts(from: from, to: to)
+        }
+    }
+}
     
 
 
-}
+
+
+
     
     
     #Preview {
