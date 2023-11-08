@@ -10,7 +10,7 @@ import Observation
 
 @Observable
 final class ContactsListViewModel {
-    //TODO: Add properties and methods below to complete ViewModel
+   
     
     
     
