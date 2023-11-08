@@ -73,7 +73,7 @@ extension ContactStore {
                 lastName: "Doe",
                 phone: "(905)123-4567",
                 email: "john@gmail.com",
-                birthday: "20th Jan 1999",
+                birthday: "7th Nov 1999",
                 address: "55 Bristol Dr.",
                 city: "Caledon",
                 country: "Canada",
