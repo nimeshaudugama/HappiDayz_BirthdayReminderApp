@@ -1,7 +1,7 @@
 import Foundation
 
 struct Contact: Identifiable {
-    let id = UUID()
+    var id = UUID()
     let firstName: String
     let lastName: String
     let phone: String
@@ -10,11 +10,14 @@ struct Contact: Identifiable {
     let address: String
     let city: String
     let country: String
+    var birthdayNotes :String
+    var savedBirthdayNotes: String
+    
    
     
     
     
-    internal init(firstName: String, lastName: String, phone: String, email: String,birthday:String, address: String, city: String, country: String) {
+    internal init(firstName: String, lastName: String, phone: String, email: String,birthday:String, address: String, city: String, country: String,birthdayNotes:String,savedBirthdayNotes:String) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -24,6 +27,10 @@ struct Contact: Identifiable {
         self.address = address
         self.city = city
         self.country = country
+        self.birthdayNotes = birthdayNotes
+        self.savedBirthdayNotes = savedBirthdayNotes
       
     }
+    
+    
 }
