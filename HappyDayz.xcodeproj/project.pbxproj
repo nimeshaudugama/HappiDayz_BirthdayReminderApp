@@ -16,6 +16,8 @@
 		313247A42AD49592001E52B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313247A32AD49592001E52B2 /* Assets.xcassets */; };
 		313247A72AD49592001E52B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313247A62AD49592001E52B2 /* Preview Assets.xcassets */; };
 		313247B12AD4960E001E52B2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313247AF2AD4960E001E52B2 /* Contact.swift */; };
+		C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */; };
+		C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EBE7B62B115E8C004C9B90 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		313247A32AD49592001E52B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		313247A62AD49592001E52B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		313247AF2AD4960E001E52B2 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C6EBE7B62B115E8C004C9B90 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				11FDF03C2AE88B9D00008D2F /* ContactDetail.swift */,
+				C6EBE7B62B115E8C004C9B90 /* ImagePickerView.swift */,
+				C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */,
 				11FDF03E2AE88BAF00008D2F /* ContactRow.swift */,
 				11FDF0402AE88BC300008D2F /* ContactsListView.swift */,
 				11FDF0462AE88E0800008D2F /* ContactsListViewModel.swift */,
@@ -172,7 +178,9 @@
 				11FDF03D2AE88B9D00008D2F /* ContactDetail.swift in Sources */,
 				313247B12AD4960E001E52B2 /* Contact.swift in Sources */,
 				11FDF0452AE88C0C00008D2F /* HappyDayz_App.swift in Sources */,
+				C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */,
 				11FDF0472AE88E0800008D2F /* ContactsListViewModel.swift in Sources */,
+				C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */,
 				11FDF0412AE88BC300008D2F /* ContactsListView.swift in Sources */,
 				11FDF03F2AE88BAF00008D2F /* ContactRow.swift in Sources */,
 			);
@@ -309,9 +317,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HappyDayz/Preview Content\"";
-				DEVELOPMENT_TEAM = 955S48J4F9;
+				DEVELOPMENT_TEAM = FL223NUCH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera access";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow Photo Libray Access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,9 +354,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HappyDayz/Preview Content\"";
-				DEVELOPMENT_TEAM = 955S48J4F9;
+				DEVELOPMENT_TEAM = FL223NUCH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera access";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow Photo Libray Access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

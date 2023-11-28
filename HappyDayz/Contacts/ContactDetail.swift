@@ -13,6 +13,8 @@ struct ContactDetail: View {
     @State private var birthdayNotes = ""
     let contactStore: ContactStore
     @State private var contact: Contact
+    @State private var isImagePickerPresented = false
+    @State private var selectedImage: UIImage?
     
     init(contact: Contact, contactStore: ContactStore) {
         self._contact = State(initialValue: contact)
@@ -21,111 +23,151 @@ struct ContactDetail: View {
     }
     
     func loadNote() {
-            birthdayNotes = contact.birthdayNotes
-        }
-
+        birthdayNotes = contact.birthdayNotes
+    }
+    
     func saveNote() {
-           contact.birthdayNotes = birthdayNotes
-           contact.savedBirthdayNotes = birthdayNotes
-           contactStore.updateContact(contact)
-       }
+        contact.birthdayNotes = birthdayNotes
+        contact.savedBirthdayNotes = birthdayNotes
+        contactStore.updateContact(contact)
+    }
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center) {
-                HStack {
-                    Text(contact.firstName)
-                        .font(.system(size: 30, weight: .bold))
-                    
-                    Text(contact.lastName)
-                        .font(.system(size: 30, weight: .bold))
-                }
-                VStack(alignment: .leading) {
-                    Divider()
-                    HStack {
-                        Text("Phone:")
-                            .frame(alignment: .leading)
+            ScrollView {
+                VStack(alignment: .center) {
+                    if let selectedImage = selectedImage {
+                        Image(uiImage: selectedImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .padding()
-                        Text(contact.phone)
+
+                        HStack {
+                            Button("Edit Image") {
+                                isImagePickerPresented.toggle()
+                            }
                             .padding()
-                            .foregroundColor(.gray)
-                    }
-                    Divider()
-                    HStack {
-                        Text("Email:")
-                            .frame(alignment: .leading)
+
+                            Spacer()
+
+                            Button("Remove Image") {
+                                self.selectedImage = nil
+                            }
                             .padding()
-                        Text(contact.email)
-                            .padding()
-                            .foregroundColor(.gray)
-                    }
-                    Divider()
-                    HStack {
-                        Text("Address:")
-                            .frame(alignment: .leading)
-                            .padding()
-                        Text(contact.address + ",")
-                            .foregroundColor(.gray)
-                        Text(contact.city + ",")
-                            .foregroundColor(.gray)
-                        Text(contact.country)
-                            .foregroundColor(.gray)
-                    }
-                    Divider()
-                    NavigationLink(destination: CalendarDialog(selectedDate: $selectedDate)) {
-                        Text("Birthday:")
-                            .frame(alignment: .leading)
-                            .padding()
-                        Text(contact.birthday)
-                            .foregroundColor(.gray)
-                    }
-                    Divider()
-                    //                                      Text("Birthday Notes:")
-                    //                                          .frame(alignment: .leading)
-                    //                                          .padding()
-                    //                                      TextEditor(text: $birthdayNotes)
-                    //                                          .frame(minHeight: 100) // Adjust the height as needed
-                    //                                          .border(Color.gray, width: 1)
-                    //                                          .padding()
-                    //
-                    //                                      Button("Save") {
-                    //                                          // Save the birthdayNotes to your data model or do something with it
-                    //                                          //contact.birthdayNotes = birthdayNotes
-                    //
-                    //                                          print("Saving birthday notes:", birthdayNotes)
-                    //                                          saveNote()
-                    //                                      }
-                    //                                      .padding()
-                    //                                  }
-                    //
-                    //
-                    //                }
-                    
-                    
-                    if contact.savedBirthdayNotes.isEmpty {
-                                      Text("Birthday Notes:")
-                                          .frame(alignment: .leading)
-                                          .padding()
-                                      TextEditor(text: $birthdayNotes)
-                                          .frame(minHeight: 100)
-                                          .border(Color.gray, width: 1)
-                                          .padding()
-                                  } else {
-                                      Text("Saved Birthday Notes:")
-                                          .frame(alignment: .leading)
-                                          .padding()
-                                      Text(contact.savedBirthdayNotes)
-                                          .frame(minHeight: 100)
-                                          .border(Color.gray, width: 1)
-                                          .padding()
-                                  }
-                
-                        Button("Save") {
-                            saveNote()
+                        }
+                        .sheet(isPresented: $isImagePickerPresented) {
+                            ImagePickerView(selectedImage: $selectedImage)
+                        }
+                        .onChange(of: selectedImage, { oldValue, newValue in
+                            isImagePickerPresented = false
+                        })
+
+                    } else {
+                        Button("Add Image") {
+                            isImagePickerPresented.toggle()
+                        }
+                        .padding()
+                        .sheet(isPresented: $isImagePickerPresented) {
+                            ImagePickerView(selectedImage: $selectedImage)
                         }
                         .padding()
                     }
-                }}
+                    VStack(alignment: .center) {
+                        HStack {
+                            Text(contact.firstName)
+                                .font(.system(size: 30, weight: .bold))
+                            
+                            Text(contact.lastName)
+                                .font(.system(size: 30, weight: .bold))
+                        }
+                        VStack(alignment: .leading) {
+                            Divider()
+                            HStack {
+                                Text("Phone:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                Text(contact.phone)
+                                    .padding()
+                                    .foregroundColor(.gray)
+                            }
+                            Divider()
+                            HStack {
+                                Text("Email:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                Text(contact.email)
+                                    .padding()
+                                    .foregroundColor(.gray)
+                            }
+                            Divider()
+                            HStack {
+                                Text("Address:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                Text(contact.address + ",")
+                                    .foregroundColor(.gray)
+                                Text(contact.city + ",")
+                                    .foregroundColor(.gray)
+                                Text(contact.country)
+                                    .foregroundColor(.gray)
+                            }
+                            Divider()
+                            NavigationLink(destination: CalendarDialog(selectedDate: $selectedDate)) {
+                                Text("Birthday:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                Text(contact.birthday)
+                                    .foregroundColor(.gray)
+                            }
+                            Divider()
+                            //                                      Text("Birthday Notes:")
+                            //                                          .frame(alignment: .leading)
+                            //                                          .padding()
+                            //                                      TextEditor(text: $birthdayNotes)
+                            //                                          .frame(minHeight: 100) // Adjust the height as needed
+                            //                                          .border(Color.gray, width: 1)
+                            //                                          .padding()
+                            //
+                            //                                      Button("Save") {
+                            //                                          // Save the birthdayNotes to your data model or do something with it
+                            //                                          //contact.birthdayNotes = birthdayNotes
+                            //
+                            //                                          print("Saving birthday notes:", birthdayNotes)
+                            //                                          saveNote()
+                            //                                      }
+                            //                                      .padding()
+                            //                                  }
+                            //
+                            //
+                            //                }
+                            
+                            
+                            if contact.savedBirthdayNotes.isEmpty {
+                                Text("Birthday Notes:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                TextEditor(text: $birthdayNotes)
+                                    .frame(minHeight: 100)
+                                    .border(Color.gray, width: 1)
+                                    .padding()
+                            } else {
+                                Text("Saved Birthday Notes:")
+                                    .frame(alignment: .leading)
+                                    .padding()
+                                Text(contact.savedBirthdayNotes)
+                                    .frame(minHeight: 100)
+                                    .border(Color.gray, width: 1)
+                                    .padding()
+                            }
+                            
+                            Button("Save") {
+                                saveNote()
+                            }
+                            .padding()
+                        }
+                    }
+                }
+            }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
         }
@@ -141,7 +183,7 @@ struct ContactDetail: View {
                 .labelsHidden()
         }
     }
-    
+}
     //#Preview {
     //    ContactDetail(contact: ContactStore.testStore.contacts[0])
     //}

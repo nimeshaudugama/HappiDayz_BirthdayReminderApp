@@ -42,16 +42,24 @@ struct ContactsListView: View {
             {
                 viewModel.filterSearchResults()
             }
-            
-            .toolbar{
-                HStack{
-                    Button("Add"){
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: deleteAllContacts) {
+                        Image(systemName: "trash.fill")
+                            .imageScale(.large)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Add") {
                         makeContact()
                     }
-                    Spacer()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Sort") {
-                    toggleSortingOrder()
+                        toggleSortingOrder()
                     }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
             }
@@ -96,6 +104,12 @@ struct ContactsListView: View {
     func deleteContact(offsets: IndexSet){
         withAnimation{
             viewModel.deleteContact(offset: offsets)
+        }
+    }
+    
+    func deleteAllContacts() {
+        withAnimation {
+            viewModel.store.contacts.removeAll()
         }
     }
     
