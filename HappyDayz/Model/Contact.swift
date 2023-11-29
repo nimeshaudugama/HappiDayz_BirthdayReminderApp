@@ -12,12 +12,13 @@ struct Contact: Identifiable {
     let country: String
     var birthdayNotes :String
     var savedBirthdayNotes: String
+    var nickName:String
     
    
     
     
     
-    internal init(firstName: String, lastName: String, phone: String, email: String,birthday:String, address: String, city: String, country: String,birthdayNotes:String,savedBirthdayNotes:String) {
+    internal init(firstName: String, lastName: String, phone: String, email: String,birthday:String, address: String, city: String, country: String,birthdayNotes:String,savedBirthdayNotes:String ,nickName:String) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -29,6 +30,7 @@ struct Contact: Identifiable {
         self.country = country
         self.birthdayNotes = birthdayNotes
         self.savedBirthdayNotes = savedBirthdayNotes
+        self.nickName = nickName
       
     }
     

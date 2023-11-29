@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118716702B168BFF006AAA5C /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187166F2B168BFF006AAA5C /* ReminderView.swift */; };
 		11FDF03B2AE88B8700008D2F /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03A2AE88B8700008D2F /* ContactStore.swift */; };
 		11FDF03D2AE88B9D00008D2F /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03C2AE88B9D00008D2F /* ContactDetail.swift */; };
 		11FDF03F2AE88BAF00008D2F /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03E2AE88BAF00008D2F /* ContactRow.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1187166F2B168BFF006AAA5C /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		11FDF03A2AE88B8700008D2F /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
 		11FDF03C2AE88B9D00008D2F /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
 		11FDF03E2AE88BAF00008D2F /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				11FDF03E2AE88BAF00008D2F /* ContactRow.swift */,
 				11FDF0402AE88BC300008D2F /* ContactsListView.swift */,
 				11FDF0462AE88E0800008D2F /* ContactsListViewModel.swift */,
+				1187166F2B168BFF006AAA5C /* ReminderView.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				11FDF0452AE88C0C00008D2F /* HappyDayz_App.swift in Sources */,
 				C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */,
 				11FDF0472AE88E0800008D2F /* ContactsListViewModel.swift in Sources */,
+				118716702B168BFF006AAA5C /* ReminderView.swift in Sources */,
 				C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */,
 				11FDF0412AE88BC300008D2F /* ContactsListView.swift in Sources */,
 				11FDF03F2AE88BAF00008D2F /* ContactRow.swift in Sources */,

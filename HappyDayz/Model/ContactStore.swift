@@ -55,7 +55,8 @@ extension ContactStore {
                 city: "Tampa Bay",
                 country: "US",
                 birthdayNotes: "Test",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:"Tess"
                 
                ),
         Contact(firstName: "Payton",
@@ -67,7 +68,8 @@ extension ContactStore {
                 city: "Georgetown",
                 country: "Canada",
                 birthdayNotes: "",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:"Anu"
                ),
         Contact(firstName: "John",
                 lastName: "Doe",
@@ -78,7 +80,8 @@ extension ContactStore {
                 city: "Caledon",
                 country: "Canada",
                 birthdayNotes: "",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:"Block"
                ),
         Contact(firstName: "Brett",
                 lastName: "Let",
@@ -89,7 +92,8 @@ extension ContactStore {
                 city: "Toronto",
                 country: "CAN",
                 birthdayNotes: "",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:"Dino"
                ),
         Contact(firstName: "Virat",
                 lastName: "Kohli",
@@ -100,7 +104,8 @@ extension ContactStore {
                 city: "Brampton",
                 country: "Canada",
                 birthdayNotes: "",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:"Mayu"
                ),
         Contact(firstName: "Rohit",
                 lastName: "Sharma",
@@ -111,7 +116,8 @@ extension ContactStore {
                 city: "Brampton",
                 country: "Canada",
                 birthdayNotes: "",
-                savedBirthdayNotes: ""
+                savedBirthdayNotes: "",
+                nickName:""
                )
     ]
     

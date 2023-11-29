@@ -45,7 +45,8 @@ final class ContactsListViewModel {
         searchResults = store.contacts.filter { contact in
             let searchTermLowercased = searchTerm.lowercased()
             return contact.firstName.localizedCaseInsensitiveContains(searchTermLowercased) ||
-                   contact.lastName.localizedCaseInsensitiveContains(searchTermLowercased)
+                   contact.lastName.localizedCaseInsensitiveContains(searchTermLowercased) ||
+            contact.nickName.localizedStandardContains(searchTermLowercased)
         }
     }
 

@@ -11,6 +11,7 @@ import SwiftUI
 struct ContactsListView: View {
     @State var viewModel: ContactsListViewModel
     @State private var isSortAscending = true
+    @State private var isSettingsPresented = false
     
     var body: some View {
         NavigationStack {
@@ -38,6 +39,11 @@ struct ContactsListView: View {
             .navigationTitle(viewModel.navTitle)
             .searchable(text: $viewModel.searchTerm,placement: .navigationBarDrawer (displayMode:
                     .automatic), prompt: "Search for Contacts")
+            .navigationBarItems(trailing: settingsButton)
+            .navigationTitle("Settings")
+            .sheet(isPresented: $isSettingsPresented) {
+                ReminderView()
+            }
             .onChange(of: viewModel.searchTerm)
             {
                 viewModel.filterSearchResults()
@@ -90,6 +96,12 @@ struct ContactsListView: View {
             isSortAscending.toggle()
             sortContacts()
         }
+    
+    var settingsButton: some View {
+        Button("Settings") {
+            isSettingsPresented = true
+        }
+    }
     
     
     func makeContact(){
