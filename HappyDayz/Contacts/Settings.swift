@@ -19,7 +19,7 @@ struct SettingsView: View {
                 })
             }
 
-            Section(header: Text("Select Language")) {
+            Section(header: Text("Available Language")) {
                 Picker("Language", selection: $selectedLanguage) {
                     ForEach(["en", "fr"], id: \.self) { language in
                         Text(self.languageName(for: language)).tag(language)

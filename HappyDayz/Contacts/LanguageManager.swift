@@ -5,6 +5,23 @@
 //  Created by Nimesha Jayathissa on 2023-12-13.
 //
 
+//import Foundation
+//
+//class LanguageManager: ObservableObject {
+//    static let shared = LanguageManager()
+//
+//    @Published var currentLanguage = "en" // Default language code, e.g., "en" for English
+//
+//    func setLanguage(_ languageCode: String) {
+//        currentLanguage = languageCode
+//    }
+//
+//    func localizedString(_ key: String) -> String {
+//        let path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj")
+//        let bundle = Bundle(path: path!) ?? Bundle.main
+//        return NSLocalizedString(key, bundle: bundle, comment: "")
+//    }
+//}
 
 
 import Foundation

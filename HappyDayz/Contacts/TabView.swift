@@ -22,7 +22,7 @@ struct MainTabView: View {
                 SettingsView()
             }
             .tabItem {
-                Label("Settings", systemImage: "gear.circle.fill")
+                Label("About", systemImage: "gear")
             }
         }
     }
