@@ -13,7 +13,7 @@ struct HappyDayz_App: App {
     
     var body: some Scene {
         WindowGroup {
-            ContactsListView(viewModel: ContactsListViewModel())
+            OnBoardingScreen()
         }
     }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110051CB2B297DEE001BA9AE /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110051CA2B297DEE001BA9AE /* LanguageManager.swift */; };
+		110051CD2B297F3F001BA9AE /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110051CC2B297F3F001BA9AE /* TabView.swift */; };
+		110051CF2B2982C7001BA9AE /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110051CE2B2982C7001BA9AE /* WelcomeScreen.swift */; };
+		110051D32B2996B1001BA9AE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110051D22B2996B1001BA9AE /* Settings.swift */; };
+		110051D82B29A1DA001BA9AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 110051DA2B29A1DA001BA9AE /* Localizable.strings */; };
 		118716702B168BFF006AAA5C /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187166F2B168BFF006AAA5C /* ReminderView.swift */; };
 		11FDF03B2AE88B8700008D2F /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03A2AE88B8700008D2F /* ContactStore.swift */; };
 		11FDF03D2AE88B9D00008D2F /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03C2AE88B9D00008D2F /* ContactDetail.swift */; };
@@ -22,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110051CA2B297DEE001BA9AE /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		110051CC2B297F3F001BA9AE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		110051CE2B2982C7001BA9AE /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		110051D22B2996B1001BA9AE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		110051D92B29A1DA001BA9AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		110051DB2B29A1FF001BA9AE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1187166F2B168BFF006AAA5C /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		11FDF03A2AE88B8700008D2F /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
 		11FDF03C2AE88B9D00008D2F /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
@@ -72,6 +83,7 @@
 				313247A32AD49592001E52B2 /* Assets.xcassets */,
 				313247A52AD49592001E52B2 /* Preview Content */,
 				11FDF0442AE88C0C00008D2F /* HappyDayz_App.swift */,
+				110051DA2B29A1DA001BA9AE /* Localizable.strings */,
 			);
 			path = HappyDayz;
 			sourceTree = "<group>";
@@ -94,6 +106,10 @@
 				11FDF0402AE88BC300008D2F /* ContactsListView.swift */,
 				11FDF0462AE88E0800008D2F /* ContactsListViewModel.swift */,
 				1187166F2B168BFF006AAA5C /* ReminderView.swift */,
+				110051CA2B297DEE001BA9AE /* LanguageManager.swift */,
+				110051CC2B297F3F001BA9AE /* TabView.swift */,
+				110051CE2B2982C7001BA9AE /* WelcomeScreen.swift */,
+				110051D22B2996B1001BA9AE /* Settings.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -149,6 +165,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 313247932AD49591001E52B2;
 			productRefGroup = 3132479D2AD49591001E52B2 /* Products */;
@@ -165,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110051D82B29A1DA001BA9AE /* Localizable.strings in Resources */,
 				313247A72AD49592001E52B2 /* Preview Assets.xcassets in Resources */,
 				313247A42AD49592001E52B2 /* Assets.xcassets in Resources */,
 			);
@@ -181,16 +199,32 @@
 				11FDF03D2AE88B9D00008D2F /* ContactDetail.swift in Sources */,
 				313247B12AD4960E001E52B2 /* Contact.swift in Sources */,
 				11FDF0452AE88C0C00008D2F /* HappyDayz_App.swift in Sources */,
+				110051D32B2996B1001BA9AE /* Settings.swift in Sources */,
 				C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */,
+				110051CF2B2982C7001BA9AE /* WelcomeScreen.swift in Sources */,
 				11FDF0472AE88E0800008D2F /* ContactsListViewModel.swift in Sources */,
 				118716702B168BFF006AAA5C /* ReminderView.swift in Sources */,
+				110051CB2B297DEE001BA9AE /* LanguageManager.swift in Sources */,
 				C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */,
 				11FDF0412AE88BC300008D2F /* ContactsListView.swift in Sources */,
+				110051CD2B297F3F001BA9AE /* TabView.swift in Sources */,
 				11FDF03F2AE88BAF00008D2F /* ContactRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		110051DA2B29A1DA001BA9AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				110051D92B29A1DA001BA9AE /* en */,
+				110051DB2B29A1FF001BA9AE /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		313247A82AD49592001E52B2 /* Debug */ = {
@@ -321,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HappyDayz/Preview Content\"";
-				DEVELOPMENT_TEAM = FL223NUCH4;
+				DEVELOPMENT_TEAM = 955S48J4F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera access";
@@ -358,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HappyDayz/Preview Content\"";
-				DEVELOPMENT_TEAM = FL223NUCH4;
+				DEVELOPMENT_TEAM = 955S48J4F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera access";

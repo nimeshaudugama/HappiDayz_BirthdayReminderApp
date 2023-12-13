@@ -12,6 +12,7 @@ struct ContactsListView: View {
     @State var viewModel: ContactsListViewModel
     @State private var isSortAscending = true
     @State private var isSettingsPresented = false
+    @State private var isDarkMode = false
     
     var body: some View {
         NavigationStack {
@@ -69,6 +70,19 @@ struct ContactsListView: View {
                     EditButton()
                 }
             }
+            .toolbar {
+                            ToolbarItem(placement: .bottomBar) {
+                                Toggle(isOn: $isDarkMode, label: {
+                                    Image(systemName: isDarkMode ? "moon.fill" : "sun.max.fill")
+                                        .imageScale(.large)
+                                    Text("Dark Mode")
+                                })
+                                .onChange(of: isDarkMode, perform: { _ in
+                                    toggleDarkMode()
+                                })
+                            }
+            }
+            .environment(\.colorScheme, isDarkMode ? .dark : .light)
         }
 
     }
@@ -92,7 +106,7 @@ struct ContactsListView: View {
 
         
         // Step 4: Toggle the sorting order
-        func toggleSortingOrder() {
+    func toggleSortingOrder() {
             isSortAscending.toggle()
             sortContacts()
         }
@@ -124,6 +138,10 @@ struct ContactsListView: View {
             viewModel.store.contacts.removeAll()
         }
     }
+    
+    func toggleDarkMode() {
+            isDarkMode.toggle()
+        }
     
     func moveContact(from: IndexSet, to: Int){
         withAnimation{

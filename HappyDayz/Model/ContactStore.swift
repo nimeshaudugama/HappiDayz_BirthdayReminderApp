@@ -15,33 +15,8 @@ final class ContactStore :ObservableObject{
     
     init(contacts: [Contact] = mockData) {
         self.contacts = contacts
-       // loadBirthdayNotes()
     }
     
-    
-   // private let birthdayNotesKey = "BirthdayNotes" // UserDefaults key
-       
-//       func saveBirthdayNotes() {
-//           var notesToSave = [String: String]()
-//           for contact in contacts {
-//               notesToSave[contact.id.uuidString] = contact.birthdayNotes
-//           }
-//           
-//           if let data = try? JSONEncoder().encode(notesToSave) {
-//               UserDefaults.standard.set(data, forKey: birthdayNotesKey)
-//           }
-//       }
-//       
-//       func loadBirthdayNotes() {
-//           if let data = UserDefaults.standard.data(forKey: birthdayNotesKey),
-//              let loadedNotes = try? JSONDecoder().decode([String: String].self, from: data) {
-//               for (contactID, notes) in loadedNotes {
-//                   if var contact = contacts.first(where: { $0.id.uuidString == contactID }) {
-//                       contact.birthdayNotes = notes
-//                   }
-//               }
-//           }
-//       }
 }
 
 extension ContactStore {

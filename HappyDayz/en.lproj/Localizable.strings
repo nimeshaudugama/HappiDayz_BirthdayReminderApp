@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  HappyDayz
+
+  Created by Nimesha Jayathissa on 2023-12-13.
+  
+*/
+"Contacts" = "Contacts";
+"Add" = "Add";
+"Settings" = "Settings";
+"Search for Contacts" = "Search for Contacts";
+"Phone:" = "Phone";
+"Email:" = "E-mail";
+"Address:" = "Address";
+"Birthday:" = "Birthday";
+"Birthday Notes:" = "Birthday Notes";
+"Save" = "Save";
+"Add Image" = "Add Image";
+"Back" = "Back";
+"Birthday Reminder" = "Birthday Reminder";
+
+"An app to manage contacts, allowing easy searching by name/nickname. Users can view contact details, set birthday reminders, and create notes for reminders." = "An app to manage contacts, allowing easy searching by name/nickname. Users can view contact details, set birthday reminders, and create notes for reminders.";
+"REMINDERS" = "REMINDERS";
+"Continue" = "Continue";
+"Enable Reminders" = "Enable Reminders";
+"SELECT LANGUAGE" = "SELECT LANGUAGE";
+"Sort" = "Sort";
+"Request Permission" = "Request Permission";
