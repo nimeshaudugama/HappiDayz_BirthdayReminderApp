@@ -22,6 +22,7 @@
 		313247A42AD49592001E52B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313247A32AD49592001E52B2 /* Assets.xcassets */; };
 		313247A72AD49592001E52B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313247A62AD49592001E52B2 /* Preview Assets.xcassets */; };
 		313247B12AD4960E001E52B2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313247AF2AD4960E001E52B2 /* Contact.swift */; };
+		8D5F06EB2B2A7CAA00C09BD5 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F06EA2B2A7CAA00C09BD5 /* CalenderView.swift */; };
 		C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */; };
 		C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EBE7B62B115E8C004C9B90 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		313247A32AD49592001E52B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		313247A62AD49592001E52B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		313247AF2AD4960E001E52B2 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		8D5F06EA2B2A7CAA00C09BD5 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C6EBE7B62B115E8C004C9B90 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				C6EBE7B42B115E49004C9B90 /* ImagePicker.swift */,
 				11FDF03E2AE88BAF00008D2F /* ContactRow.swift */,
 				11FDF0402AE88BC300008D2F /* ContactsListView.swift */,
+				8D5F06EA2B2A7CAA00C09BD5 /* CalenderView.swift */,
 				11FDF0462AE88E0800008D2F /* ContactsListViewModel.swift */,
 				1187166F2B168BFF006AAA5C /* ReminderView.swift */,
 				110051CA2B297DEE001BA9AE /* LanguageManager.swift */,
@@ -203,6 +206,7 @@
 				C6EBE7B72B115E8C004C9B90 /* ImagePickerView.swift in Sources */,
 				110051CF2B2982C7001BA9AE /* WelcomeScreen.swift in Sources */,
 				11FDF0472AE88E0800008D2F /* ContactsListViewModel.swift in Sources */,
+				8D5F06EB2B2A7CAA00C09BD5 /* CalenderView.swift in Sources */,
 				118716702B168BFF006AAA5C /* ReminderView.swift in Sources */,
 				110051CB2B297DEE001BA9AE /* LanguageManager.swift in Sources */,
 				C6EBE7B52B115E49004C9B90 /* ImagePicker.swift in Sources */,

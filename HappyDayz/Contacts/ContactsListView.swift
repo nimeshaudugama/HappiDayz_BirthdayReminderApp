@@ -13,6 +13,7 @@ struct ContactsListView: View {
     @State private var isSortAscending = true
     @State private var isSettingsPresented = false
     @State private var isDarkMode = false
+    @State private var isCalenderViewPresented = false
     
     var body: some View {
         NavigationStack {
@@ -44,6 +45,11 @@ struct ContactsListView: View {
             .navigationTitle("Settings")
             .sheet(isPresented: $isSettingsPresented) {
                 ReminderView()
+            }
+            .navigationBarItems(trailing: calenderButton)
+            .navigationTitle("Calender")
+            .sheet(isPresented: $isCalenderViewPresented) {
+                ContentView()
             }
             .onChange(of: viewModel.searchTerm)
             {
@@ -114,6 +120,12 @@ struct ContactsListView: View {
     var settingsButton: some View {
         Button("Settings") {
             isSettingsPresented = true
+        }
+    }
+    
+    var calenderButton: some View {
+        Button("Calender") {
+            isCalenderViewPresented = true
         }
     }
     
